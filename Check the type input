@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class CheckInput {
+    public static void main(String[] args) {
+        System.out.println("Enter the Input");
+        Scanner sc = new Scanner(System.in);
+        char IO = sc.next().charAt(0);
+
+        if((IO>=97 && IO<=122) ||(IO>=65 && IO<=90)){
+            System.out.println(IO + " is Albhabet.");
+        }
+        else if (IO >= 48 && IO <= 57){
+            System.out.println(IO + " is Digit.");
+        }
+        else{
+            System.out.println(IO + "is special character.");
+        }
+
+        sc.close();
+    }    
+}
