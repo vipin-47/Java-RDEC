@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class Marksheet {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the Roll No. = ");
+        int RN = sc.nextInt();
+        System.out.println("Enter the Name = ");
+        String Name = sc.next();
+        System.out.println("Enter First Subject Marks");
+        int M1 = sc.nextInt();
+        System.out.println("Enter Secound Subject Marks");
+        int M2 = sc.nextInt();
+        System.out.println("Enter Third Subject Marks");
+        int M3 = sc.nextInt(); 
+
+        int TMarks = M1+M2+M3;
+        float TPercentage = (TMarks*100)/300;
+        System.out.println("----------------------------------------------------------------");
+        System.out.println("Name =                   " + Name);
+        System.out.println("Roll NO. =               "  + RN);
+        System.out.println("TOTAL MARKS =            " + TMarks);
+        System.out.println("TOTAL PERCENTAGE =       " + TPercentage);
+        if(TPercentage >= 90){
+            System.out.println("Grade A");
+        }
+        else if (TPercentage<90 && TPercentage>=70){
+            System.out.println("Grade =                   B");
+        }
+        else if (TPercentage < 70 && TPercentage >= 60) {
+            System.out.println("Grade =                   C");
+        }
+        else if (TPercentage < 60 && TPercentage >= 50) {
+            System.out.println("Grade =                   D");
+        }
+        else {
+            System.out.println("Grade =                   F");
+        }
+
+        System.out.println("-------------------------------------------------------------------");
+        sc.close();
+    }    
+}
