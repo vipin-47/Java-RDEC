@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class VowelConso {
+    public static void main(String[] args) {
+        System.out.println("Enter the Input");
+        Scanner sc = new Scanner(System.in);
+        char IO = sc.next().charAt(0);
+        if(IO == 'a' || IO == 'e' ||IO == 'i' ||IO == 'o' || IO == 'u' || IO == 'A' || IO == 'E' || IO == 'I' || IO == 'O' || IO == 'U'){
+            System.out.println(IO + " is vowel");
+        }
+        else {
+            System.out.println(IO + " is Conconant");
+        }
+        sc.close();
+    }
+}
